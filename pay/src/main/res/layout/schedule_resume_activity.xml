@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_card"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/constraintLayout4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginBottom="24dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/tvSchedule"
+            layout="@layout/schedule_date_view" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/scheduleContainer"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_marginBottom="8dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="@dimen/divider"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/divider"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:background="@color/gray4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/containerAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <View
+              android:layout_width="3dp"
+              android:layout_height="3dp"
+              android:layout_gravity="center_vertical"
+              android:background="@drawable/background_circular"
+              android:backgroundTint="@color/blue" />
+
+          <TextView
+              android:id="@+id/tvLocationLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/default_margin_elements"
+              android:text="@string/place_scheduled"
+              android:textColor="@color/gray10"
+              android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLocationScheduled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_elements"
+            android:layout_marginTop="@dimen/default_margin_small"
+            android:layout_marginEnd="@dimen/margin_50"
+            android:text="Rua Munhoz da Rocha Neto, 39 São Judas - SP"
+            android:textColor="@color/gray10"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/containerAddress"
+            app:layout_constraintTop_toBottomOf="@+id/containerAddress"
+            tools:text="Rua Munhoz da Rocha Neto, 39 São Judas - SP" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/deafult_margin_12"
+            android:background="@drawable/background_circular"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/tvDatetimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled" />
+
+        <TextView
+            android:id="@+id/tvDatetimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/deafult_margin_12"
+            android:text="@string/scheduling_hour_label"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintStart_toStartOf="@id/tvLocationScheduled"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled" />
+
+        <TextView
+            android:id="@+id/tvDatetimeScheduled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_small"
+            android:layout_marginTop="@dimen/deafult_margin_12"
+            android:text="11:45"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintStart_toEndOf="@id/tvDatetimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled"
+            tools:text="11:45" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/schedule_resume_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+    </View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        tools:itemCount="6"
+        tools:listitem="@layout/schedule_resume_adapter" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="TOTAL R$00,00"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Parcelado em até 2x no cartão de crédito"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_primary"
+        android:text="Efetuar pagamento"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

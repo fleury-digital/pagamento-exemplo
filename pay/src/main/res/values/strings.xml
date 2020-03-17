@@ -1,0 +1,19 @@
+<resources>
+  <string name="payment">Pagamento</string>
+  <string name="schedule_resume">Resumo de agendamento</string>
+  <string name="invalid_card">Cartão inválido, por favor, verifique seus dados</string>
+  <string name="place_scheduled">Local de coleta</string>
+  <string name="scheduling_hour_label">Horário:</string>
+  <string name="check_details">Ver detalhes</string>
+  <string name="check_instructions">Ver preparo</string>
+  <string-array name="installments">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+  </string-array>
+</resources>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <include
+      android:id="@+id/include"
+      layout="@layout/schedule_finished_toolbar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <View
+      android:id="@+id/constraintLayout"
+      android:layout_width="0dp"
+      android:layout_height="80dp"
+      android:background="@color/colorPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/include">
+
+  </View>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView4"
+      tools:itemCount="2"
+      tools:listitem="@layout/schedule_finished_adapter" />
+
+  <TextView
+      android:id="@+id/total"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="24dp"
+      android:text="TOTAL R$00,00"
+      android:textAlignment="textEnd"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout3"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/bg_card"
+      android:elevation="3dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/include">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <include
+          android:id="@+id/tvSchedule"
+          layout="@layout/schedule_date_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scheduleContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <View
+          android:layout_width="@dimen/divider"
+          android:layout_height="0dp"
+          android:layout_marginStart="@dimen/divider"
+          android:layout_marginTop="@dimen/default_margin_small"
+          android:background="@color/gray4"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <LinearLayout
+          android:id="@+id/containerAddress"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/background_circular"
+            android:backgroundTint="@color/blue" />
+
+        <TextView
+            android:id="@+id/tvLocationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin_elements"
+            android:text="@string/place_scheduled"
+            android:textColor="@color/gray10"
+            android:textSize="@dimen/font_14" />
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/tvLocationScheduled"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_margin_elements"
+          android:layout_marginTop="@dimen/default_margin_small"
+          android:layout_marginEnd="@dimen/margin_50"
+          android:text="Rua Munhoz da Rocha Neto, 39 São Judas - SP"
+          android:textColor="@color/gray10"
+          android:textSize="@dimen/font_12"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@id/containerAddress"
+          app:layout_constraintTop_toBottomOf="@+id/containerAddress"
+          tools:text="Rua Munhoz da Rocha Neto, 39 São Judas - SP" />
+
+      <View
+          android:layout_width="3dp"
+          android:layout_height="3dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginTop="@dimen/deafult_margin_12"
+          android:background="@drawable/background_circular"
+          android:backgroundTint="@color/blue"
+          app:layout_constraintBottom_toBottomOf="@id/tvDatetimeLabel"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled" />
+
+      <TextView
+          android:id="@+id/tvDatetimeLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/deafult_margin_12"
+          android:text="@string/scheduling_hour_label"
+          android:textColor="@color/gray2"
+          android:textSize="@dimen/font_14"
+          app:layout_constraintStart_toStartOf="@id/tvLocationScheduled"
+          app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled" />
+
+      <TextView
+          android:id="@+id/tvDatetimeScheduled"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_margin_small"
+          android:layout_marginTop="@dimen/deafult_margin_12"
+          android:text="11:45"
+          android:textColor="@color/gray2"
+          android:textSize="@dimen/font_14"
+          app:layout_constraintStart_toEndOf="@id/tvDatetimeLabel"
+          app:layout_constraintTop_toBottomOf="@+id/tvLocationScheduled"
+          tools:text="11:45" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <Button
+      android:id="@+id/addToCalendar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="24dp"
+      android:background="@drawable/btn_primary"
+      android:text="Adicionar ao calendário"
+      android:textColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+  <Button
+      android:id="@+id/cancel"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="24dp"
+      android:layout_marginBottom="16dp"
+      android:background="@android:color/transparent"
+      android:text="Condições de cancelamento"
+      android:textColor="@color/colorPrimary"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/addToCalendar" />
+
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="Sua transação foi efetuada com sucesso!"
+      android:textColor="@color/black"
+      android:textSize="@dimen/font_18_sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+  <TextView
+      android:id="@+id/textView6"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:text="Pago no cartão de crédito em 2x"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/total" />
+
+  <TextView
+      android:id="@+id/textView7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="8dp"
+      android:text="**** **** **** 2222"
+      android:textColor="@color/black"
+      android:textSize="20dp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="50dp"
+      android:layout_height="15dp"
+      android:layout_marginStart="16dp"
+      app:layout_constraintBottom_toBottomOf="@+id/textView7"
+      app:layout_constraintStart_toEndOf="@+id/textView7"
+      app:layout_constraintTop_toTopOf="@+id/textView7"
+      app:srcCompat="@drawable/visa" />
+
+  <TextView
+      android:id="@+id/textView8"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="40dp"
+      android:layout_marginEnd="24dp"
+      android:text="Em caso de cancelamento com até 36h de antecedência todo o valor é devolvido, após esse prazo é cobrada a taxa de atendimento."
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView7" />
+</androidx.constraintlayout.widget.ConstraintLayout>
