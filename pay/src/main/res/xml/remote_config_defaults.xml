@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+  <entry>
+    <key>installments</key>
+    <value>1</value>
+  </entry>
+  <entry>
+    <key>cancel_conditions</key>
+    <value>Haverá uma cobrança de taxa de atendimento quando o cancelamento ocorrer com menos de 39h para a realização do exame</value>
+  </entry>
+</defaultsMap>

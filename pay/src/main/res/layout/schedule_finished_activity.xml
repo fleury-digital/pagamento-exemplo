@@ -194,7 +194,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
-      android:layout_marginTop="24dp"
+      android:layout_marginTop="32dp"
       android:layout_marginEnd="24dp"
       android:background="@drawable/btn_primary"
       android:text="Adicionar ao calendário"
@@ -202,7 +202,7 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView8" />
+      app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
   <Button
       android:id="@+id/cancel"
@@ -266,15 +266,4 @@
       app:layout_constraintTop_toTopOf="@+id/textView7"
       app:srcCompat="@drawable/visa" />
 
-  <TextView
-      android:id="@+id/textView8"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="24dp"
-      android:layout_marginTop="40dp"
-      android:layout_marginEnd="24dp"
-      android:text="Em caso de cancelamento com até 36h de antecedência todo o valor é devolvido, após esse prazo é cobrada a taxa de atendimento."
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

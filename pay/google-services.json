@@ -1,0 +1,191 @@
+{
+  "project_info": {
+    "project_number": "596091418232",
+    "firebase_url": "https://flr-campana-dev.firebaseio.com",
+    "project_id": "flr-campana-dev",
+    "storage_bucket": "flr-campana-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596091418232:android:bac47bbba50b3216dc5f8d",
+        "android_client_info": {
+          "package_name": "br.com.fleury.campana.alpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2uzP1kxlEKYbYiCnODChCfEDAgtk-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596091418232-1nneaoqjcenl1s184h0mb36bhtcd51m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.fleury.campana"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596091418232:android:960599843c14bb37dc5f8d",
+        "android_client_info": {
+          "package_name": "br.com.fleury.campana.alpha.homol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2uzP1kxlEKYbYiCnODChCfEDAgtk-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596091418232-1nneaoqjcenl1s184h0mb36bhtcd51m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.fleury.campana"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596091418232:android:a9818f8e339e5f97dc5f8d",
+        "android_client_info": {
+          "package_name": "br.com.fleury.campana.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2uzP1kxlEKYbYiCnODChCfEDAgtk-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596091418232-1nneaoqjcenl1s184h0mb36bhtcd51m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.fleury.campana"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596091418232:android:32416a80552abb33dc5f8d",
+        "android_client_info": {
+          "package_name": "br.com.fleury.campana.homol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2uzP1kxlEKYbYiCnODChCfEDAgtk-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596091418232-1nneaoqjcenl1s184h0mb36bhtcd51m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.fleury.campana"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596091418232:android:f19d286b0192d2cadc5f8d",
+        "android_client_info": {
+          "package_name": "br.com.grupofleury.pagamento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2uzP1kxlEKYbYiCnODChCfEDAgtk-WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596091418232-q6niutr4maqgkgln5ir0t4o5gg9o3d2e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "596091418232-1nneaoqjcenl1s184h0mb36bhtcd51m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.fleury.campana"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
