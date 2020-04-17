@@ -22,6 +22,7 @@
     <activity android:name="br.com.grupofleury.pagamento.presentation.view.AddCardActivity" />
     <activity android:name="br.com.grupofleury.pagamento.presentation.view.ScheduleResumeActivity" />
     <activity android:name="br.com.grupofleury.pagamento.presentation.view.ScheduleFinishedActivity" />
+    <activity android:name="br.com.grupofleury.pagamento.presentation.view.cardControl.CardControlActivity"/>
   </application>
 
 </manifest>

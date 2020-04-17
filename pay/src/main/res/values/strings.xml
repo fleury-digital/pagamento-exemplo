@@ -16,4 +16,5 @@
     <item>7</item>
     <item>8</item>
   </string-array>
+  <string name="card_number">\u2022\u2022\u2022\u2022  \u2022\u2022\u2022\u2022  \u2022\u2022\u2022\u2022 %s</string>
 </resources>

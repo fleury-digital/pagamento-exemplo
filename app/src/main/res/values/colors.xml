@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#0066CC</color>
-  <color name="colorPrimaryDark">#3700B3</color>
-  <color name="colorAccent">#000000</color>
+  <color name="colorPrimary">#A41738</color>
+  <color name="colorPrimaryDark">#999</color>
+  <color name="colorAccent">#A41738</color>
   <color name="pay_bg">#7766CC</color>
 </resources>

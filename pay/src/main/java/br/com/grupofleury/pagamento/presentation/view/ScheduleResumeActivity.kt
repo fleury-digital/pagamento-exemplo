@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.grupofleury.pagamento.R
 import br.com.grupofleury.pagamento.entities.Item
+import br.com.grupofleury.pagamento.presentation.view.cardControl.CardControlActivity
 import br.com.grupofleury.pagamento.presentation.view.custom.ScheduleResumeAdapter
 import br.com.grupofleury.pagamento.repository.remote.RemoteConfigService
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
@@ -32,7 +33,8 @@ class ScheduleResumeActivity : BaseActivity() {
 
   private fun listeners() {
     cancelConditions.setOnClickListener { cancelAlert() }
-    pay.setOnClickListener { startActivity(Intent(this, AddCardActivity::class.java)) }
+    //pay.setOnClickListener { startActivity(Intent(this, AddCardActivity::class.java)) }
+    pay.setOnClickListener { CardControlActivity.start(this) }
     whats.setOnClickListener { openWhatsApp() }
   }
 
