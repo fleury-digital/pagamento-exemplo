@@ -52,10 +52,10 @@ class AddCardActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
       saveMyCard = isChecked
     }
     birthdate?.editText?.setOnClickListener {
-      birthDate()
+      //birthDate()
     }
     birthdate?.setOnClickListener {
-      birthDate()
+      //birthDate()
     }
     expires?.editText?.setOnClickListener {
       createDialogWithoutDateField()
