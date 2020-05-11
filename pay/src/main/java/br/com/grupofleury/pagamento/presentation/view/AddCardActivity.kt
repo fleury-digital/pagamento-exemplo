@@ -102,6 +102,11 @@ class AddCardActivity : BaseActivity(), DatePickerDialog.OnDateSetListener {
   }
 
   private fun pay() {
+    viewModel.sendCardData(
+      name?.editText?.text.toString(),
+      cardNumber?.editText?.text.toString(),
+      expires?.editText?.text.toString(),
+      cvv?.editText?.text.toString())
     viewModel.saveCard(this, "MTYyMDUxMzY=", saveMyCard)
   }
 

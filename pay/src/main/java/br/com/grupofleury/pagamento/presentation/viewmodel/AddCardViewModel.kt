@@ -1,6 +1,8 @@
 package br.com.grupofleury.pagamento.presentation.viewmodel
 
 import androidx.lifecycle.*
+import br.com.braspag.silentorder.Environment
+import br.com.braspag.silentorder.SilentOrderPost
 import br.com.grupofleury.pagamento.R
 import br.com.grupofleury.pagamento.api.Network
 import br.com.grupofleury.pagamento.common.CPFValidator
@@ -12,7 +14,11 @@ import br.com.grupofleury.pagamento.repository.Repository
 import br.com.grupofleury.pagamento.repository.remote.RemoteConfigService
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
 class AddCardViewModel : ViewModel() {
 
@@ -22,6 +28,12 @@ class AddCardViewModel : ViewModel() {
 
   private lateinit var remoteConfig: RemoteConfigService
   private lateinit var repository: IRepository
+
+  private val paymentSdk = SilentOrderPost(Environment.SANDBOX)
+  private val parentJob = Job()
+  private val coroutineContext: CoroutineContext
+    get() = parentJob + Dispatchers.IO
+  private val scope = CoroutineScope(coroutineContext)
 
   init {
     val network = Network()
@@ -45,6 +57,22 @@ class AddCardViewModel : ViewModel() {
           verifyInstallments()
         }
       })
+    }
+  }
+
+  fun sendCardData(cardName: String, cardNumber: String, expirationDate: String, cvv: String) {
+    scope.launch {
+      paymentSdk.accessToken = "bdasihudhasuda"
+      paymentSdk.enableBinQuery = true
+      paymentSdk.sendCardData(
+        cardHolderName = cardName,
+        cardNumber = cardNumber,
+        cardExpirationDate = expirationDate,
+        cardCvv = cvv,
+        onError = { println(">>>>>> Error - $it") },
+        onSuccess = { println(">>>>>> Success - payment token: ${it.paymentToken}") },
+        onValidation = { println(">>>>>> Validation issue(s) - $it") }
+      )
     }
   }
 

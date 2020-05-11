@@ -9,11 +9,15 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Url
 
 interface IApi {
 
   @POST("/v2/auth/token")
   fun auth(auth: Auth): Flow<Response<Token>>
+
+  @POST
+  fun cieloAuth(@Url url: String) : Deferred<Response<String>>
 
   @POST("customers/{customerId}/optin")
   fun optIn(
