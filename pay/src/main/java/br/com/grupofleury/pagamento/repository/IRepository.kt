@@ -7,7 +7,5 @@ interface IRepository {
 
   fun auth() : MutableLiveData<String>
 
-  suspend fun cieloAuth() : MutableLiveData<String>
-
   suspend fun optin(customerId: String, optIn: Optin): MutableLiveData<Boolean>
 }
